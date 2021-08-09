@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact</title>
+		<meta name="description" content="Contact">
+		<meta name="keywords" content="Contact Info, Form, Location, Address">
+		<meta name="author" content="Sujen Shrestha">
+	
+		<!--Creating Internal CSS-->
+		<style type="text/css">
+			*
+			{
+				margin: 0px auto;
+			}
+
+		</style>
+
+		<!--Importing External CSS-->
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+
+	<body>
+
+		<!--Creating a wrapper-->
+		<div style="width: 100%; height: 880px;" class="wrapper_image">
+
+			<!--Creating header and navigation-->
+			<!--Using Inline CSS-->
+			<header style="width: 100%; height: 140px;">
+
+				<!--Division for logo-->
+				<div style="width: 100%; height: 80px; text-align: center;">
+					<p style="color: #E2CC00; font-size: 34px; font-family: Copperplate Gothic; font-weight: bold; padding-top: 20px;">Sujen Shrestha</p>
+				</div>
+
+				<!--Creating navigation bar-->
+				<nav style="width: 100%; height: 75px; float: left; text-align: center; background-color: #ffe083; border-top-style: solid; border-bottom-style: solid;">
+
+					<!--Division for navigation menu-->
+					<div style="width: 50%;height: 30px; margin-top: 25px; float: left;">
+						
+						<ul>
+							<li class="list_style"><a href="../index.html" class="navigation_style">Home</a></li>
+							<li class="list_style"><a href="../pages/CV.html" class="navigation_style">CV</a></li>
+							<li class="list_style"><a href="../pages/Blogs.html" class="navigation_style">Blogs</a></li>
+							<li class="list_style"><a href="../pages/Research.html" class="navigation_style">Research</a></li>
+							<li class="list_style"><a href="../pages/Contact.html" class="navigation_style">Contact</a></li>
+						</ul>
+
+					</div>
+
+					<!--Division for Naviagation Text-->
+					<div style="width: 20%;height: 30px; margin-top: 25px;margin-right: 380px; float: center;">
+
+						<p class="list_style"><a  class="navigation_style">Find me on</a></p>
+
+					</div>
+
+					<!--Division for social media directing links-->
+					<div style="width: 30%;height: 50px; margin-top: -43px; float: right; margin-right: 40px;">
+						<a href="https://www.facebook.com" target="_blank"><img src="../images/Facebook Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.youtube.com" target="_blank"><img src="../images/Youtube Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.twitter.com" target="_blank"><img src="../images/Twitter Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.instagram.com" target="_blank"><img src="../images/Instagram Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.linkedin.com" target="_blank"><img src="../images/Linkedin Circle.png" height="50" width="60" class="social_space"></a>
+					</div>
+
+				</nav>
+			</header>
+
+			<!--Division for main content-->
+			<main style="width: 100%; height: 580px;">
+
+				<!--Division for Title Heading-->
+				<div style="width: 100%; height: 120px;">
+					<p style="text-align: center; font-size: 30px; font-weight: bold; padding-top: 50px; font-family: 'Copperplate Gothic';">Contact Info</p>
+				</div>
+				  
+				<!--Division for Form Description-->
+				<div style="font-size: 20px;font-weight: bold; font-family: 'Courier New'; padding-left: 250px; padding-top: 20px; height: 100px;">
+
+					<p>LIKE MY WORK ?</p>
+					<br>
+					<p>You can fill the form to reach out to me.</p>
+				</div>
+
+				<!--Division for Form Content-->
+				<div style="font-family: 'High Tower Text'; font-weight: bold; float: left; height: 300px; width: 30%;padding-left: 250px;">
+					
+					<form name="messageForm" onsubmit="validateForm()">
+						<p style="float: left;">First name:<br><input type="text" name="firstname" class="form_border"></p>
+						<p style="float: right;">Last name:<br><input type="text" name="lastname" class="form_border"></p>
+						<br>
+						<br>
+						<br>
+						<p style="float: left;">Gender:<br><input type="radio" name="gender" value="male" checked> Male 
+						<input type="radio" name="gender" value="female"> Female 
+						<input type="radio" name="gender" value="other"> Other </p>
+						<p style="float: right;">Email:<br><input type="text" name="email" class="form_border"></p>
+						<br>
+						<br>
+						<br>
+						<p style="float: left;">Leave a message: <br><textarea name="message" rows="8" cols="55" placeholder=" Enter your message..." class="form_border"></textarea></p>
+						<br>
+						<p style="text-align: center;"><input type="submit" value="Submit" style="border-radius: 20px; border: 4px solid; font-size: 16px; font-weight: bold; font-family: Helvetica"></p>
+					</form>
+
+					<!--Creating a JavaScript function for validating form-->
+					<script>
+						function validateForm()
+						{
+							//Takes values from the assigned input names respectively. 
+							var fname = document.forms["messageForm"]["firstname"].value;
+							var lname = document.forms["messageForm"]["lastname"].value;
+							var gender = document.forms["messageForm"]["gender"].value;
+							var email = document.forms["messageForm"]["email"].value;
+							var message = document.forms["messageForm"]["message"].value;
+
+							if (fname == "" || lname == "" || email == "" || message == "") /* Executes if the fields are empty */
+							{
+								alert("Empty fields found. Please fill the form."); /* Shows an alert box */
+							}
+							else /* Executes when the fields are not empty */
+							{
+								alert("Thank you for the feedback.");
+							}
+						}
+					</script>
+				</div>
+
+				<!--Division for placing the map image and description-->
+				<div style="font-weight: bold; font-family: 'Courier New'; float: right; height: 200px; width: 30%; padding-right: 250px;">
+					<a href="https://www.google.com/maps/place/Islington+College/@27.7082102,85.3247082,16z/data=!4m5!3m4!1s0x0:0x1fdf1a6d41d2512d!8m2!3d27.7087242!4d85.3260543" target="_blank"><img style="border-radius: 20px;" src="../images/Map Image.png" height="210" width="400" class="form_border"></a>
+					<br>
+					<p> Location : Kamal Marg, Kamal Pokhari, Kathmandu, Nepal</p>
+					<p>Tel : 4512929, 980-1022446</p>
+					<p>Whatsapp & Viber Number : 9801000400</p>
+					<p>Email : info@islington.edu.np</p>
+				</div>
+			</main>
+
+			<!--Creating Footer Content-->
+			<footer style="background-color:#4dd0e2; width: 100%; height: 134px;border-top-style: solid; border-bottom-style: solid;">
+
+				<!--Division for Footer Navigation menu-->
+				<div style="width: 50%; height: 30px; padding-top: 10px; padding-left: 170px;">
+					<ul style="list-style-type:">
+						<li class="list_style"><a href="../index.html" class="navigation_style">Home</a></li>
+						<li class="list_style"><a href="../pages/CV.html" class="navigation_style">CV</a></li>
+						<li class="list_style"><a href="../pages/Blogs.html" class="navigation_style">Blogs</a></li>
+						<li class="list_style"><a href="../pages/Research.html" class="navigation_style">Research</a></li>
+						<li class="list_style"><a href="../pages/Contact.html" class="navigation_style">Contact</a></li>
+					</ul>
+				</div>
+				<br>
+
+					<!--Division for Footer Social Media Icons-->
+					<div style="width: 55%;height: 55px; margin-left: 575px;">
+						<a href="https://www.facebook.com" target="_blank"><img src="../images/Facebook Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.youtube.com" target="_blank"><img src="../images/Youtube Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.twitter.com" target="_blank"><img src="../images/Twitter Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.instagram.com" target="_blank"><img src="../images/Instagram Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.linkedin.com" target="_blank"><img src="../images/Linkedin Circle.png" height="50" width="60" class="social_space"></a>
+					</div>
+					<br>
+
+					<p style="color: #000000; text-align: center; font-weight: bold; margin-top: 5px; background-color: #ffe083;">————————  &copy Copyright 2021 - All rights reserved.  ————————</p>		
+
+			</footer>
+
+		</div>
+ 	</body>
+</html>

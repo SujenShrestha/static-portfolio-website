@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Homepage</title>
+		<meta name="description" content="Homepage">
+		<meta name="keywords" content="CV, Blogs, Research, Contact Time, Image slider, ">
+		<meta name="author" content="Sujen Shrestha">
+	
+		<!--Creating Internal CSS-->
+		<style type="text/css">
+			*
+			{
+				margin: 0px auto;
+			}
+
+		</style>
+
+		<style type="text/css">
+
+	    .slider
+	    {
+	    	width: 100%;
+	    	height: 100%;
+	    	overflow: hidden;
+	    }
+
+	  </style>
+
+		<!--Importing External CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+
+		<!--Creating a wrapper-->
+		<div style="width: 100%; height: 1280px;" class="wrapper_image">
+
+			<!--Creating header and navigation-->
+			<!--Using Inline CSS-->
+			<header style="width: 100%; height: 140px;">
+
+				<!--Division for logo-->
+				<div style="width: 100%; height: 80px; text-align: center;">
+					<p style="color: #E2CC00; font-size: 34px; font-family: Copperplate Gothic; font-weight: bold; padding-top: 20px;">Sujen Shrestha</p>
+				</div>
+
+				<!--Creating navigation bar-->
+				<nav style="width: 100%; height: 75px; float: left; text-align: center; background-color: #ffe083;border-top-style: solid; border-bottom-style: solid;">
+
+					<!--Division for navigation menu-->
+					<div style="width: 50%;height: 30px; margin-top: 25px; float: left;">
+						
+						<ul>
+							<li class="list_style"><a href="index.html" class="navigation_style">Home</a></li>
+							<li class="list_style"><a href="pages/CV.html" class="navigation_style">CV</a></li>
+							<li class="list_style"><a href="pages/Blogs.html" class="navigation_style">Blogs</a></li>
+							<li class="list_style"><a href="pages/Research.html" class="navigation_style">Research</a></li>
+							<li class="list_style"><a href="pages/Contact.html" class="navigation_style">Contact</a></li>
+						</ul>
+
+					</div>
+
+					<!--Division for Naviagation Text-->
+					<div style="width: 20%;height: 30px; margin-top: 25px;margin-right: 380px; float: center;">
+
+						<label class="list_style" class="navigation_style">Find me on</label>
+
+					</div>
+
+					<!--Division for social media directing links-->
+					<div style="width: 30%;height: 50px; margin-top: -43px; float: right; margin-right: 40px;">
+						<a href="https://www.facebook.com" target="_blank"><img src="images/Facebook Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.youtube.com" target="_blank"><img src="images/Youtube Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.twitter.com" target="_blank"><img src="images/Twitter Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.instagram.com" target="_blank"><img src="images/Instagram Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.linkedin.com" target="_blank"><img src="images/Linkedin Circle.png" height="50" width="60" class="social_space"></a>
+					</div>
+
+				</nav>
+			</header>
+
+			<body>
+
+				<!--Division for clock-->
+				<div id="clock" class="clock" style="height: 50px; width: 100%; text-align: right;">
+				</div>
+
+					<!--Creating JavaScript for displaying Clock-->
+					<script>
+				    	function clock()
+				    {
+				    	//Initializing values for variables
+				    	var date = new Date(); /* Using date constructor to create a new Date object */
+				    	var hrs = date.getHours();
+				    	var mins = date.getMinutes();
+				    	var secs = date.getSeconds();
+				    	var period = "AM";
+				    
+				    	if (hrs == 0) hrs = 12; /* Executes if the hrs becomes 0 */
+				    	if (hrs > 12) /* Executes if the value of hrs is greater than 12 */
+				    	{
+				        	hrs = hrs - 12; 
+				        	period = "PM";
+				    	}
+				    
+				    	//Assigning the values of hrs, mins and secs 
+				    	hrs = hrs < 10 ? `0${hrs}` : hrs;
+						mins = mins < 10 ? `0${mins}` : mins;
+						secs = secs < 10 ? `0${secs}` : secs;
+				    	var time = `${hrs}:${mins}:${secs} ${period}`; /* Displaying time in the format*/
+
+				    	setInterval(clock, 1000); /* Setting the time interval to 1 second*/
+
+				    	document.getElementById("clock").innerText = time; /* Extracting element through ID of img */
+				    }
+				    
+				    clock();
+
+				  </script>
+			<!--Division for main content-->
+			<main style="width: 100%; height: 2160px;" class="wrapper_image">
+
+				<!--Division for image-->
+				<div style="background-color: ; width: 90%;"><img src="images/Home.png" width="100%" height="70%"> </div>
+				
+				<!--Division for CV description box-->
+				<div style="height: 330px; width: 35%; float: left; background-color: #ffe083; margin-top: 80px; margin-left: 12%; border-style: solid;">
+					<div style="font-style: 'Helvetica'; padding: 30px; font-size: 20px; font-weight: bold; line-height: 20px;text-align: justify;">
+						<p>CV</p><br>
+						<p>In this page you will find all the details about my qualifications, experiences, education, etc. If you are interested to hire me then you can check out my skills, trainings, achievents and contact details. It also contains information about me and the projects that I've done. If you want to learn more the about me then you can go to the page by clicking the button below.</p><br>
+						<button type="button" style="text-align: center;" class="button"><a href="pages/CV.html" class="navigation_style">Go to page</a></button>
+					</div>
+				</div>
+				
+				<!--Division for Blogs description box-->
+				<div style="height: 330px; width: 35%; float: right; background-color: #b2ebf2; margin-top: 80px; margin-right: 12%; border-style: solid;">
+					<div style="font-style: 'Helvetica'; padding: 30px; font-size: 20px; font-weight: bold; line-height: 20px; text-align: justify;">
+						<p>Blogs</p><br>
+						<p>In this page you will find all my blog posts. It consists of various articles related to technology and its impacts. The positive and negative impacts of technology are elaborated with suitable images. It also consists of a navigation pane to  quickly navigate to the desired topic. If you want to learn more the about me then you can go to the page by clicking the button below.</p><br>
+						<button type="button" style="text-align: center;" class="button"><a href="pages/Blogs.html" class="navigation_style">Go to page</a></button>
+					</div>
+				</div>
+				
+				<!--Division for Research description box-->
+				<div style="height: 330px; width: 35%; float: left; background-color: #b2ebf2; margin-top: 80px; margin-left: 12%; border-style: solid;">
+					<div style="font-style: 'Helvetica'; padding: 30px; font-size: 20px; font-weight: bold; line-height: 20px; text-align: justify;">
+						<p>Research</p><br>
+						<p>In this page you will find all the websites that I looked into to create the design for this website. It contains a detailed comparison between this website and the referenced website. The website designs created in those websites have inspired various ideas to implement in this one. If you find out about the references then you can go to the research page by clicking the button below.</p><br>
+						<button type="button" style="text-align: center;" class="button"><a href="pages/Research.html" class="navigation_style">Go to page</a></button>
+					</div>
+				</div>
+				
+				<!--Division for Contact description box-->
+				<div style="height: 330px; width: 35%; float: right; background-color: #ffe083; margin-top: 80px; margin-right: 12%; border-style: solid;">
+					<div style="font-style: 'Helvetica'; padding: 30px; font-size: 20px; font-weight: bold; line-height: 20px; text-align: justify;">
+						<p>Contacts</p><br>
+						<p>In this page you will find a form which you can fill to contact me. You will also find an image which redirects you to the google map location. It also contains various information like address, phone number, email and so on. If you want to hire me or work together with me on various projects then you can go to the page to contact me by clicking the button below.</p><br>
+						<button type="button" style="text-align: center;" class="button"><a href="pages/Contact.html" class="navigation_style">Go to page</a></button>
+					</div>
+				</div>
+				
+				<!--Division for image slider box-->
+				<div class="slider" style="margin-top: 870px; height: 580px; width: 70%;">
+
+					<!--Division for image-->
+			    	<div id="img">
+			    	<img src="images/5.jpg">
+			    	</div>
+				</div>
+
+				<!--JavaScript function for image slider at certain interval-->
+				<script>
+
+			    var images = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg']; /* Array for images */
+
+			    var x = 0; /* Assigning vlaue for variable */
+
+			    var imgs = document.getElementById('img'); /* Extracting element through ID of img */
+
+			    setInterval(slider, 5000); /* Time interval of 5 second*/
+
+			    function slider()
+			    {
+			    	if (x < images.length) /* Condition when value of x is less than number elements in array */
+			    	{
+			    		x = x + 1; /* Increasing value of x by 1 */
+			    	}
+			    	else /* Condition when the value of x is equal number elements of array */
+			    	{
+			        	x = 1;
+			    	}
+			    	imgs.innerHTML = "<img src=" + images[x - 1] + ">"; /* Changing HTML content with given image */
+			    }
+
+				</script>
+
+			</main>
+
+			<!--Creating Footer Content-->
+			<footer style="background-color:#4dd0e2; width: 100%; height: 134px;border-top-style: solid; border-bottom-style: solid;">
+
+				<!--Division for Footer Navigation menu-->
+				<div style="width: 50%; height: 30px; padding-top: 10px; padding-left: 170px;">
+					<ul style="list-style-type:">
+						<li class="list_style"><a href="index.html" class="navigation_style">Home</a></li>
+						<li class="list_style"><a href="pages/CV.html" class="navigation_style">CV</a></li>
+						<li class="list_style"><a href="pages/Blogs.html" class="navigation_style">Blogs</a></li>
+						<li class="list_style"><a href="pages/Research.html" class="navigation_style">Research</a></li>
+						<li class="list_style"><a href="pages/Contact.html" class="navigation_style">Contact</a></li>
+					</ul>
+				</div>
+				<br>
+
+					<!--Division for Footer Social Media Icons-->
+					<div style="width: 55%;height: 55px; margin-left: 575px;">
+						<a href="https://www.facebook.com" target="_blank"><img src="images/Facebook Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.youtube.com" target="_blank"><img src="images/Youtube Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.twitter.com" target="_blank"><img src="images/Twitter Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.instagram.com" target="_blank"><img src="images/Instagram Circle.png" height="50" width="60" class="social_space"></a>
+						<a href="https://www.linkedin.com" target="_blank"><img src="images/Linkedin Circle.png" height="50" width="60" class="social_space"></a>
+					</div>
+					<br>
+
+					<p style="color: #000000; text-align: center; font-weight: bold; margin-top: 5px; background-color: #ffe083;">————————  &copy Copyright 2021 - All rights reserved.  ————————</p>		
+
+			</footer>
+
+		</div>
+ 	</body>
+</html>

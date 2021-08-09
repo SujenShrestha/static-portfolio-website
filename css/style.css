@@ -1,0 +1,101 @@
+/* Defining font family, weight, size and margin for navigation menu */
+.list_style
+{
+	display: inline;
+	font-family: 'Helvetica';
+	font-weight: bold;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/* Defining style, spacing and colour for navigation menu */
+.navigation_style
+{
+	text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #000000;
+}
+
+/* Defining padding for social media icons */
+.social_space
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+/* Defining rounded borders for form fields for Contact page */
+.form_border
+{
+	border-radius: 10px;
+	border: 3px solid;"
+}
+
+/* Defining background image to fit the screen */
+.wrapper_image
+{
+  background-image: url('../images/Abstract.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Defining image dimensions for Blog page */
+.center
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 400px;
+}
+
+/* Mouse over effect */
+a:hover
+{
+  color: #01abc2;
+}
+
+/* Mouse click effect */
+a:active
+{
+  color: white;
+}
+
+/* Defining border spacing for table for research page */
+.table_space
+{
+  border-spacing: 25px;
+}
+
+/* Defining image dimensions for research page */
+.research_image
+{
+	height: 300px;
+	width: 300px;
+}
+
+/* Defining clock properties for home page */
+.clock
+{
+	float: right;
+	font-family: sans-serif;
+	height: 80px;
+	width: 290px;
+	color: #000000;
+  font-size: 40px;
+}
+
+/* Defining button properties for home page  */
+.button {
+  background-color: lightyellow;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 180px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
